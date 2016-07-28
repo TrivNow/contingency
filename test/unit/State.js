@@ -73,17 +73,21 @@ tap.test('State lifecycle return values - Promises',(t) => {
 })
 
 tap.test('Failing State lifecycle return values ',(t) => {
-  t.plan(3)
+  t.plan(4)
   let PromiseState = new State(States.bad)
   let init = PromiseState.init().catch(function(err) {
-    t.type(err, 'Error', 'Resolves to an error object.')
+    t.type(err, 'Error', 'init Resolves to an error object.')
   })
 
   let enter = PromiseState.enter().catch(function(err) {
-    t.type(err, 'Error', 'Resolves to an error object.')
+    t.type(err, 'Error', 'enter Resolves to an error object.')
   })
 
   let run = PromiseState.run().catch(function(err) {
-    t.type(err, 'Error', 'Resolves to an error object.')
+    t.type(err, 'Error', 'run Resolves to an error object.')
+  })
+
+  let exit = PromiseState.exit().catch(function(err) {
+    t.type(err, 'Error', 'exit Resolves to an error object.')
   })
 })

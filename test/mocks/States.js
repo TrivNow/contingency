@@ -56,6 +56,7 @@ module.exports = {
       return Promise.resolve(false)
     },
     exit: function() {
+      throw new Error()
       return Promise.resolve(true)
     }
   }
