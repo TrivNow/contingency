@@ -16,7 +16,5 @@ module.exports = {
   name: 'test.abort',
   initial: 'gatherData',
   states: [
-    require('./states/gatherData')(),
-    require('./states/increment')()
   ]
 }

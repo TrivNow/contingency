@@ -1,7 +1,7 @@
 /**
- * @file sendMail
+ * @file actualAbort
  * @author Jim Bulkowski <jim.b@paperelectron.com>
- * @project Trivnow-TaskRunner
+ * @project contingency
  * @license MIT {@link http://opensource.org/licenses/MIT}
  */
 
@@ -9,18 +9,18 @@
 
 /**
  *
- * @module sendMail
+ * @module actualAbort
  */
 
 module.exports = {
-  name: 'gatherData',
+  name: 'abort',
   //Set up your state scope on this.
   init: function() {
-    this.Data.count = 0
     return true
   },
   //Setup this state transition.
   enter: function() {
+    this.Data.actualAbort = true
     return true
   },
   run: function() {
