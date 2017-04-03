@@ -8,7 +8,7 @@
     "Jim Bulkowski <jim.b@paperelectron.com>"
   ],
   "scripts": {
-    "test": "NODE_ENV=test tap -R spec test/unit/*.js test/integration/**/*.js",
+    "test": "NODE_ENV=test tap -R spec --cov test/unit/*.js test/integration/**/*.js",
     "test:unit": "NODE_ENV=test tap -R spec --cov test/unit/*.js",
     "test:integration": "NODE_ENV=test tap -R spec --cov test/integration/**/*.js",
     "test:report": "NODE_ENV=test tap -R spec --cov --coverage-report=lcov test/unit/*.js test/integration/**/*.js",
@@ -32,12 +32,12 @@
   },
   "homepage": "https://github.com/TrivNow/contingency#readme",
   "dependencies": {
-    "bluebird": "^3.4.1",
-    "debug": "^2.2.0",
-    "lodash": "^4.13.1"
+    "bluebird": "^3.5.0",
+    "debug": "^2.6.3",
+    "lodash": "^4.17.4",
+    "uuid": "^3.0.1"
   },
   "devDependencies": {
-    "bluebird": "^3.4.6",
     "tap": "^8.0.1",
     "v8-profiler": "^5.6.5"
   }
